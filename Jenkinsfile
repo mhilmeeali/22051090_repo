@@ -9,15 +9,15 @@ pipeline {
         }
         stage('Stage 2') {
           steps {
-              sh  "'#!/bin/bash
+              sh  ''#!/bin/bash
                puppet resource package git ensure=present
                puppet resource package apache2 ensure=present
                puppet resource service apache2 ensure=running
                puppet resource file /tmp/22051090/clone ensure=absent
                puppet resource file /tmp/22051090/clone ensure=directory
                git clone https://github.com/mhilmeeali/22051090_repo.git /tmp/22051090/clone
-               cp /tmp/22051090/clone/index.html /var/www/html/index.html'"
-              input '22051090STG2 - Push to production web server completed''
+               cp /tmp/22051090/clone/index.html /var/www/html/index.html''
+              input '22051090STG2 - Push to production web server completed'
           }
         } 
          stage('Stage 3') {
