@@ -44,7 +44,4 @@ pipeline {
           }
         }
     }
-    Jenkinsfile {
-         filename '22051090_jenkinsfile'
-    }
  } 
