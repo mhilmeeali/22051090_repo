@@ -1,1 +1,15 @@
-
+pipeline {
+    agent any
+    stages {
+       stage('Stage 1') {
+          steps {
+              echo '22051090STG1: Push change to production web server?'
+              input 'Proceed or Abort?'
+          }
+        }
+        stage('Stage 2') {
+          steps {
+              sh  'bolt '
+              input 'Proceed or Abort?'
+          }
+        } 
