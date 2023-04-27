@@ -43,6 +43,8 @@ pipeline {
               echo '22051090STG6: Production Operation is successful.'
           }
         }
-     
-     }
+    }
+    Jenkinsfile {
+         filename '22051090_jenkinsfile'
+    }
  } 
